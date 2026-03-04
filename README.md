@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Recipe-Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Recipe Finder for when I don't know what to cook.
+A simple and intuitive web application for discovering meals based on ingredients, categories, and favorites. Built with React + TypeScript, the app uses the public TheMealDB API to fetch real recipes, images, and instructions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Ingredient Search
 
-## React Compiler
+Search for meals by typing one or more ingredients:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- chicken
+- potatoes, tomatoes
+- rice, beef, onion
+  The app fetches meals for each ingredient and returns only the meals that contain all of them (intersection filtering).
 
-## Expanding the ESLint configuration
+### Category Filtering
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Open the slide‑out sidebar and filter meals by category:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Beef
+- Chicken
+- Pasta
+- Seafood
+- Vegan
+- Dessert
+  …and more.
+  Category filtering intersects with ingredient filtering.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Favorites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Save meals you like and access them anytime from the Favorites panel.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Clean UI
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Centered search bar
+- Centered recipe results
+- Favorites on the left
+- Categories slide‑out on the right
+- Responsive layout
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
+
+- React (Vite)
+- TypeScript
+- CSS
+- TheMealDB API
+
+## Getting Started
+
+- Clone the repository
+- Install dependencies with 'npm install'
+- Run the server with 'npm run dev'
+- App will be available at 'http://localhost:5173'
+- Or run 'npm run build' for production
