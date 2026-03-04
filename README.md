@@ -3,6 +3,8 @@
 My Recipe Finder for when I don't know what to cook.
 A simple and intuitive web application for discovering meals based on ingredients, categories, and favorites. Built with React + TypeScript, the app uses the public TheMealDB API to fetch real recipes, images, and instructions.
 
+- Live Demo: https://celebrated-banoffee-38820f.netlify.app/
+
 ## Features
 
 ### Ingredient Search
