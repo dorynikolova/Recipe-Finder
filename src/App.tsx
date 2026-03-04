@@ -133,5 +133,3 @@ export function App() {
     </>
   );
 }
-
-// da se maha kato pochna da triq, readme, deploy

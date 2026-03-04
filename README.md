@@ -55,3 +55,8 @@ Save meals you like and access them anytime from the Favorites panel.
 - Run the server with 'npm run dev'
 - App will be available at 'http://localhost:5173'
 - Or run 'npm run build' for production
+
+## Future Improvements
+
+- Real‑time Search Suggestions - Enhance the search bar to update results as the user types, without requiring them to submit the full ingredient name.
+- Smarter empty‑state handling - When the input becomes empty, the app should instantly clear results instead of waiting for the user to press Enter.
